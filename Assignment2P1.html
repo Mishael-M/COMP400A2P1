@@ -62,11 +62,11 @@
         for (var x = 0; x < passLength; x++){
             randomWeight = (Math.floor((Math.random() * 10) + 1));
             if (randomWeight % 2 == 0 ){
-                password += alphabetChar.charAt(Math.floor((Math.random() * (alphabetChar.length - 1)) + 0));
+                password += alphabetChar.charAt(Math.floor(Math.random() * (alphabetChar.length)));
             } else if (randomWeight % 3 == 0 || randomWeight == 5){
-                password += numericChar.charAt(Math.floor((Math.random() * (numericChar.length - 1)) + 0));
+                password += numericChar.charAt(Math.floor(Math.random() * (numericChar.length)));
             } else {
-                password += nonNumericChar.charAt(Math.floor((Math.random() * (nonNumericChar.length - 1)) + 0));
+                password += nonNumericChar.charAt(Math.floor(Math.random() * (nonNumericChar.length)));
             }
             document.getElementById("pass").innerHTML = "The generated password is " + password + " and is " + passLength + " characters long!";
         }
